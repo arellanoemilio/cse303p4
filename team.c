@@ -7,6 +7,6 @@ struct team_t team =
 	"ema218@lehigh.edu", /* first member email  */
 	"Charles Mandala", /* second member name  */
 	"cam418@lehigh.edu", /* second member email */
-	"", /* third member name   */
-	"", /* third member email  */
+	"Stephanie Beddow", /* third member name   */
+	"her email", /* third member email  */
 };
