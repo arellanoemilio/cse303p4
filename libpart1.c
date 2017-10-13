@@ -23,7 +23,7 @@ void myToUpper(char *dest, char *orig){
 
 void *ucase(void *input)
 {
-	struct team_t inTeam = (struct team_t *)input;
+	struct team_t *inTeam = (struct team_t *)input;
 	struct team_t *team = (struct team_t *) malloc(sizeof(struct team_t));
 	team->name1 = (char *)malloc((strlen(inTeam->name1) + 1) *sizeof(char));
 	team->name2 = (char *)malloc((strlen(inTeam->name2) + 1) *sizeof(char));

@@ -37,8 +37,8 @@ int main(int argc, char **argv)
 	hello(NULL);
 
 	/* TODO: execute the new function "ucase" that you added to libpart1.c */
-	struct team_t *myNewTeam = (struct team_t*) ucase((void *)team);
-	printf(myNewTeam->name1);
+	struct team_t *myNewTeam = (struct team_t*) ucase((void *) &team);
+	printf("%s", myNewTeam->name1);
 
 	return 0;
 }
