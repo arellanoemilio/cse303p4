@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 	}
 
 	/* call load_and_invoke() to run the given function of the given library */
-	load_and_invoke("libpart1.so", "hello");
+	load_and_invoke("./obj64/libpart1.so", "hello");
 
 	exit(0);
 }
