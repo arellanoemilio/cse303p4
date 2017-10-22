@@ -1,12 +1,17 @@
 #include<stdio.h>
 #include<unistd.h>
 #include<stdlib.h>
+#include <dlfcn.h>
 #include"support.h"
 
 /* load_and_invoke() - load the given .so and execute the specified function */
 void load_and_invoke(char *libname, char *funcname)
 {
-	/* TODO: complete this function */
+	void (*hello)(void(*)());
+	void *handle = dlopen(libname, RTLD_LAZY);
+	hello = dlsym(handle, funcname);
+	hello(NULL);
+	dlclose(handle);
 }
 
 /* help() - Print a help message. */
@@ -38,8 +43,7 @@ int main(int argc, char **argv)
 	}
 
 	/* call load_and_invoke() to run the given function of the given library */
-	load_and_invoke(NULL, NULL);
+	load_and_invoke("libpart1.so", "hello");
 
 	exit(0);
 }
-
